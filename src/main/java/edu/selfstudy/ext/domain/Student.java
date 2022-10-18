@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
-@Table(name="student_register")
+@Table(name="sr_student")
 @Entity
 public class Student {
     @Id
