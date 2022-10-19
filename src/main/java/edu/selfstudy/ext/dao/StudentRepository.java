@@ -4,10 +4,12 @@ import edu.selfstudy.ext.domain.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Repository
 public interface StudentRepository extends JpaRepository<Student,Long> {
     @Query("SELECT st FROM Student st WHERE st.surName = :surName AND st.givenName=:givenName AND st.middleName =:middleName " +
             "AND st.dateOfBirth=:dateOfBirth AND st.passportSeria=:passportSeria " +

@@ -1,1 +1,3 @@
+edu\selfstudy\ext\dao\UniversityRepository.class
+edu\selfstudy\ext\service\UniversityService.class
 edu\selfstudy\ext\servlet\UniveristyListServlet.class
