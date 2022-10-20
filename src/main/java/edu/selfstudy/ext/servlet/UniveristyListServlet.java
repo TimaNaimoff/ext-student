@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @WebServlet(name="UniveristyListServlet",urlPatterns={"/universityList"})
@@ -22,9 +24,13 @@ public class UniveristyListServlet extends HttpServlet {
         ServletContext ctx=getServletContext();
         WebApplicationContext webCtx = WebApplicationContextUtils.getWebApplicationContext(ctx);
         UniversityService service = webCtx.getBean(UniversityService.class);
-        List<University> universities = service.findUniversities();
+        List<University> universities = service.findFullUniversities();
         universities.forEach(u-> System.out.println(u.getUniversityName()+":"+u.getFaculties().size()));
-        getServletContext().getRequestDispatcher("/university.jsp").
-                 forward(req,resp);
+        req.setAttribute("today", LocalDate.now().format(DateTimeFormatter.ISO_DATE));
+        req.setAttribute("universities",universities);
+//        getServletContext().getRequestDispatcher("/university.jsp").
+//                 forward(req,resp);
+        getServletContext().getRequestDispatcher("/universityList_jstl.jsp").
+                forward(req,resp);
     }
 }
