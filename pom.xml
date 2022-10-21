@@ -101,27 +101,27 @@
         <artifactId>jaxb-api</artifactId>
         <version>${jaxb.version}</version>
     </dependency>
-    <dependency>
-        <groupId>org.glassfish.jersey.containers</groupId>
-        <artifactId>jersey-container-servlet</artifactId>
-        <version>${jersy.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.glassfish.jersey.inject</groupId>
-        <artifactId>jersey-hk2</artifactId>
-        <version>${jersy.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--        <groupId>org.glassfish.jersey.containers</groupId>-->
+<!--        <artifactId>jersey-container-servlet</artifactId>-->
+<!--        <version>${jersy.version}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>org.glassfish.jersey.inject</groupId>-->
+<!--        <artifactId>jersey-hk2</artifactId>-->
+<!--        <version>${jersy.version}</version>-->
+<!--    </dependency>-->
 
-    <dependency>
-        <groupId>org.glassfish.jersey.media</groupId>
-        <artifactId>jersey-media-moxy</artifactId>
-        <version>${jersy.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.glassfish.jersey.ext</groupId>
-        <artifactId>jersey-spring5</artifactId>
-        <version>${jersy.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--        <groupId>org.glassfish.jersey.media</groupId>-->
+<!--        <artifactId>jersey-media-moxy</artifactId>-->
+<!--        <version>${jersy.version}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--        <groupId>org.glassfish.jersey.ext</groupId>-->
+<!--        <artifactId>jersey-spring5</artifactId>-->
+<!--        <version>${jersy.version}</version>-->
+<!--    </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
