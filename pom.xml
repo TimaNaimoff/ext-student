@@ -90,6 +90,11 @@
         <artifactId>spring-data-jpa</artifactId>
         <version>${spring-jpa.version}</version>
     </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>5.1.7.RELEASE</version>
+    </dependency>
 
     <dependency>
         <groupId>javax.xml.bind</groupId>
@@ -134,5 +139,6 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
     </dependencies>
 </project>

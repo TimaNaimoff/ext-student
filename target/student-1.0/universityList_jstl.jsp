@@ -22,8 +22,8 @@
 <td>${university.universityId}</td>
 <td>${university.universityName}</td>
 </tr>
- </c:forEach>
- </tbody>
- </table>
+    </c:forEach>
+    </tbody>
+    </table>
 </body>
 </html>

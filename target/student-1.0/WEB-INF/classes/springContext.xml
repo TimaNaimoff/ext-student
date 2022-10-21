@@ -43,6 +43,11 @@
 <bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
     <property name="entityManagerFactory" ref="emf"/>
 </bean>
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>
         <!--<bean id="dao" class="dao.MarriageDao">-->
 <!--    <property name="test" value="SIMPLE_NEW"/>-->
