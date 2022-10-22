@@ -1,10 +1,17 @@
 package edu.selfstudy.ext.view;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.time.LocalDate;
 
 public class StudentResponse {
     private String studentDocumentNumber;
+    @JsonSerialize(converter=LocalDateStringConverter.class)
+    @JsonDeserialize(converter=StringLocalDateConverter.class)
     private LocalDate studentDocumentDate;
+    @JsonSerialize(converter=LocalDateStringConverter.class)
+    @JsonDeserialize(converter=StringLocalDateConverter.class)
     private LocalDate expiredDate;
     private String facultyName;
     private String universityName;
