@@ -22,10 +22,15 @@ public class StudentController {
     @ResponseBody
     public List<StudentResponse> getStudentInfo(@RequestBody StudentRequest studentRequest){
          return studentService.getStudentInfo(studentRequest);
-    }
+    } 
     @GetMapping(path="/check")
 
     public String checkAdmin(){
         return "Rest Service is working!";
+    }
+
+    @GetMapping(path="/param/{checkId}")
+    public String checkParams(@PathVariable("checkId") Long checkId,@RequestParam("comment")String comment){
+        return checkId+":"+comment;
     }
 }
